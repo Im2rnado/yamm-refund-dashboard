@@ -15,7 +15,7 @@ export default function OrdersTable({ orders }: OrdersTableProps) {
     const paginatedOrders = orders.slice((page - 1) * perPage, page * perPage);
 
     return (
-        <div className="bg-white shadow-md rounded-md p-4">
+        <div className="bg-primary shadow-md rounded-md p-4">
             <Table headers={["ID", "Reason", "Store", "Amount", "Status", "Items", "Decision", "View"]}>
                 {paginatedOrders.map((order) => (
                     <OrderRow key={order.id} {...order} itemsCount={order.items.length} />
@@ -27,7 +27,7 @@ export default function OrdersTable({ orders }: OrdersTableProps) {
                 <button
                     onClick={() => setPage((p) => Math.max(1, p - 1))}
                     disabled={page === 1}
-                    className="px-4 py-2 bg-gray-300 rounded-md disabled:opacity-50"
+                    className="px-4 py-2 bg-button text-white rounded-md disabled:opacity-50"
                 >
                     Previous
                 </button>
@@ -39,7 +39,7 @@ export default function OrdersTable({ orders }: OrdersTableProps) {
                 <button
                     onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
                     disabled={page === totalPages}
-                    className="px-4 py-2 bg-gray-300 rounded-md disabled:opacity-50"
+                    className="px-4 py-2 bg-button text-white rounded-md disabled:opacity-50"
                 >
                     Next
                 </button>

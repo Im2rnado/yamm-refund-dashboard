@@ -12,7 +12,7 @@ const Sidebar = () => {
     ];
 
     return (
-        <aside className="w-64 h-screen bg-gray-900 text-white fixed top-0 left-0 flex flex-col p-4">
+        <aside className="w-64 h-screen bg-primary text-white fixed top-0 left-0 flex flex-col p-4">
             <h2 className="text-xl font-bold mb-6">Yamm Dashboard</h2>
             <nav>
                 <ul className="space-y-3">
@@ -22,7 +22,7 @@ const Sidebar = () => {
                                 href={link.href}
                                 className={clsx(
                                     "block px-4 py-2 rounded-md transition",
-                                    pathname === link.href ? "bg-gray-700" : "hover:bg-gray-800"
+                                    pathname === link.href ? "bg-button" : "hover:bg-button"
                                 )}
                             >
                                 {link.label}

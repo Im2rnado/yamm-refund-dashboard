@@ -9,7 +9,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="flex">
         <Providers>
           <Sidebar />
-          <main className="ml-64 w-full">{children}</main>
+          <main className="ml-64 w-full h-screen bg-secondary">{children}</main>
           <Toaster position="top-right" />
         </Providers>
       </body>

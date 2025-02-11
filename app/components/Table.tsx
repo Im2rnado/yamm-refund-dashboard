@@ -8,10 +8,10 @@ interface TableProps {
 const Table = ({ headers, children }: TableProps) => {
     return (
         <table className="w-full border-collapse">
-            <thead className="bg-gray-100 border-b">
+            <thead className="bg-secondary border-b rounded-md">
                 <tr>
                     {headers.map((header) => (
-                        <th key={header} className="px-4 py-2 text-left text-gray-700 font-semibold">
+                        <th key={header} className="px-4 py-2 text-left text-primary font-semibold">
                             {header}
                         </th>
                     ))}

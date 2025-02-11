@@ -17,11 +17,11 @@ export default function OrderDetailsPage() {
 
     return (
         <div className="h-screen flex items-center justify-center">
-            <div className="max-w-3xl w-full p-6 bg-white shadow-md rounded-md">
-                <h1 className="text-2xl font-semibold mb-4">Order Details - {order.id}</h1>
+            <div className="max-w-3xl w-full p-6 bg-primary shadow-md rounded-md text-white">
+                <h1 className="text-2xl font-bold mb-4">Order Details - {order.id}</h1>
                 <p><strong>Reason:</strong> {order.reason}</p>
                 <p>
-                    <strong>Store:</strong> <a href={order.store_url} className="text-blue-500 underline">{order.store_name}</a>
+                    <strong>Store:</strong> <a href={order.store_url}>{order.store_name}</a>
                 </p>
                 <p><strong>Amount:</strong> {order.amount} SAR</p>
                 <p><strong>Status:</strong> {order.active ? "Active" : "Inactive"}</p>
@@ -37,7 +37,7 @@ export default function OrderDetailsPage() {
                     ))}
                 </ul>
 
-                <Link href="/refunds" className="mt-6 inline-block text-blue-500 underline">Back to Orders</Link>
+                <Link href="/refunds" className="mt-6 inline-block text-secondary">{"< Back to All Orders"}</Link>
             </div>
         </div>
     );
