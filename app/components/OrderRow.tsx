@@ -1,28 +1,31 @@
+"use client";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { updateRefund } from "../lib/api";
 import Link from "next/link";
+import { useState } from "react";
+import { OrderRowProps } from "../types";
 
-interface OrderRowProps {
-    id: string;
-    reason: string;
-    store_name: string;
-    store_logo: string;
-    store_url: string;
-    amount: number;
-    active: boolean;
-    itemsCount: number;
-    decision: string | null;
-}
+const OrderRow = ({ id, reason, store_name, store_logo, store_url, amount, active, itemsCount, decision }: OrderRowProps) => {
+    const queryClient = useQueryClient();
+    const [isActive, setIsActive] = useState(active);
+    const [currentDecision, setCurrentDecision] = useState(decision || "Not Yet");
 
-const OrderRow = ({
-    id,
-    reason,
-    store_name,
-    store_logo,
-    store_url,
-    amount,
-    active,
-    itemsCount,
-    decision,
-}: OrderRowProps) => {
+    const { mutate: toggleActive } = useMutation({
+        mutationFn: () => updateRefund(id, { active: !isActive }),
+        onSuccess: () => {
+            setIsActive(!isActive);
+            queryClient.invalidateQueries({ queryKey: ["refunds"] });
+        },
+    });
+
+    const { mutate: changeDecision } = useMutation({
+        mutationFn: (newDecision: string) => updateRefund(id, { decision: newDecision }),
+        onSuccess: (newDecision) => {
+            setCurrentDecision(newDecision);
+            queryClient.invalidateQueries({ queryKey: ["refunds"] });
+        },
+    });
+
     return (
         <tr className="border-b hover:bg-gray-50">
             <td className="px-4 py-2">{id}</td>
@@ -34,9 +37,27 @@ const OrderRow = ({
                 </a>
             </td>
             <td className="px-4 py-2">{amount} SAR</td>
-            <td className="px-4 py-2">{active ? "Active" : "Inactive"}</td>
+            <td className="px-4 py-2">
+                <button
+                    onClick={() => toggleActive()}
+                    className={`px-3 py-1 text-sm font-semibold rounded-md ${isActive ? "bg-green-500 text-white" : "bg-gray-300 text-black"}`}
+                >
+                    {isActive ? "Active" : "Inactive"}
+                </button>
+            </td>
             <td className="px-4 py-2">{itemsCount} items</td>
-            <td className="px-4 py-2">{decision || "Not Yet"}</td>
+            <td className="px-4 py-2">
+                <select
+                    value={currentDecision}
+                    onChange={(e) => changeDecision(e.target.value)}
+                    className="border px-2 py-1 rounded-md"
+                >
+                    <option value="Not Yet">Not Yet</option>
+                    <option value="accept">Accept</option>
+                    <option value="reject">Reject</option>
+                    <option value="escalate">Escalate</option>
+                </select>
+            </td>
             <td className="px-4 py-2">
                 <Link href={`/refunds/${id}`} className="text-blue-500 underline">
                     View

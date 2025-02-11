@@ -6,3 +6,8 @@ export const fetchRefunds = async () => {
     const response = await axios.get(`${API_URL}/refunds`);
     return response.data;
 };
+
+export const updateRefund = async (id: string, data: Partial<{ active: boolean; decision: string }>) => {
+    const response = await axios.patch(`${API_URL}/refunds/${id}`, data);
+    return response.data;
+};
