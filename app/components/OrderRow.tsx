@@ -4,6 +4,7 @@ import { updateRefund } from "../lib/api";
 import Link from "next/link";
 import { useState } from "react";
 import { OrderRowProps } from "../types";
+import toast from "react-hot-toast";
 
 const OrderRow = ({ id, reason, store_name, store_logo, store_url, amount, active, itemsCount, decision }: OrderRowProps) => {
     const queryClient = useQueryClient();
@@ -15,14 +16,16 @@ const OrderRow = ({ id, reason, store_name, store_logo, store_url, amount, activ
         onSuccess: () => {
             setIsActive(!isActive);
             queryClient.invalidateQueries({ queryKey: ["refunds"] });
+            toast.success(`Order ${id} is now ${!isActive ? "Inactive" : "Active"}`);
         },
     });
 
     const { mutate: changeDecision } = useMutation({
         mutationFn: (newDecision: string) => updateRefund(id, { decision: newDecision }),
         onSuccess: (newDecision) => {
-            setCurrentDecision(newDecision);
+            setCurrentDecision(newDecision.decision);
             queryClient.invalidateQueries({ queryKey: ["refunds"] });
+            toast.success(`Decision updated to ${newDecision.decision}`);
         },
     });
 
@@ -53,9 +56,9 @@ const OrderRow = ({ id, reason, store_name, store_logo, store_url, amount, activ
                     className="border px-2 py-1 rounded-md"
                 >
                     <option value="Not Yet">Not Yet</option>
-                    <option value="accept">Accept</option>
-                    <option value="reject">Reject</option>
-                    <option value="escalate">Escalate</option>
+                    <option value="Accept">Accept</option>
+                    <option value="Reject">Reject</option>
+                    <option value="Escalate">Escalate</option>
                 </select>
             </td>
             <td className="px-4 py-2">

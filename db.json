@@ -7,8 +7,8 @@
       "store_logo": "/logos/luxury.png",
       "store_url": "https://luxurywatches.com",
       "amount": 3499,
-      "active": true,
-      "decision": null,
+      "active": false,
+      "decision": "Not Yet",
       "items": [
         {
           "name": "First Night Age",
@@ -25,8 +25,8 @@
       "store_logo": "/logos/elite.png",
       "store_url": "https://elitetimepieces.com",
       "amount": 5299,
-      "active": false,
-      "decision": null,
+      "active": true,
+      "decision": "Escalate",
       "items": [
         {
           "name": "Eternal Elegance",
