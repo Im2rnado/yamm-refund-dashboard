@@ -35,6 +35,396 @@
           "quantity": 1
         }
       ]
+    },
+    {
+      "id": "ORD125",
+      "reason": "Item Not as Described",
+      "store_name": "Urban Gadgets",
+      "store_logo": "/logos/urban.png",
+      "store_url": "https://urbangadgets.com",
+      "amount": 199,
+      "active": true,
+      "decision": "Reject",
+      "items": [
+        {
+          "name": "Smart Watch X",
+          "id": "G001",
+          "price": 199,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD126",
+      "reason": "Late Delivery",
+      "store_name": "Fresh Groceries",
+      "store_logo": "/logos/fresh.png",
+      "store_url": "https://freshgroceries.com",
+      "amount": 89,
+      "active": true,
+      "decision": "Accept",
+      "items": [
+        {
+          "name": "Organic Apples",
+          "id": "F001",
+          "price": 89,
+          "quantity": 5
+        },
+        {
+          "name": "Bananas",
+          "id": "F002",
+          "price": 29,
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "id": "ORD127",
+      "reason": "Defective Item",
+      "store_name": "Tech Haven",
+      "store_logo": "/logos/tech.png",
+      "store_url": "https://techhaven.com",
+      "amount": 799,
+      "active": true,
+      "decision": "Escalate",
+      "items": [
+        {
+          "name": "Wireless Earbuds",
+          "id": "T001",
+          "price": 799,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD128",
+      "reason": "Wrong Size",
+      "store_name": "Fashion Forward",
+      "store_logo": "/logos/fashion.png",
+      "store_url": "https://fashionforward.com",
+      "amount": 129,
+      "active": false,
+      "decision": "Pending",
+      "items": [
+        {
+          "name": "Denim Jacket",
+          "id": "C001",
+          "price": 129,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD129",
+      "reason": "Item Not Received",
+      "store_name": "Book Nook",
+      "store_logo": "/logos/book.png",
+      "store_url": "https://booknook.com",
+      "amount": 125,
+      "active": true,
+      "decision": "Accept",
+      "items": [
+        {
+          "name": "The Great Novel",
+          "id": "B001",
+          "price": 25,
+          "quantity": 1
+        },
+        {
+          "name": "The Adventure Book",
+          "id": "B002",
+          "price": 25,
+          "quantity": 1
+        },
+        {
+          "name": "The Mystery Book",
+          "id": "B003",
+          "price": 25,
+          "quantity": 1
+        },
+        {
+          "name": "The Science Book",
+          "id": "B004",
+          "price": 25,
+          "quantity": 1
+        },
+        {
+          "name": "The History Book",
+          "id": "B005",
+          "price": 25,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD130",
+      "reason": "Defective Item",
+      "store_name": "Home Essentials",
+      "store_logo": "/logos/home.png",
+      "store_url": "https://homeessentials.com",
+      "amount": 59,
+      "active": false,
+      "decision": "Pending",
+      "items": [
+        {
+          "name": "Blender Pro",
+          "id": "H001",
+          "price": 59,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD131",
+      "reason": "Wrong Color",
+      "store_name": "Trendy Threads",
+      "store_logo": "/logos/trendy.png",
+      "store_url": "https://trendythreads.com",
+      "amount": 79,
+      "active": false,
+      "decision": "Refunded",
+      "items": [
+        {
+          "name": "Striped Shirt",
+          "id": "C002",
+          "price": 79,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD132",
+      "reason": "Item Not as Described",
+      "store_name": "Gadget Galaxy",
+      "store_logo": "/logos/galaxy.png",
+      "store_url": "https://gadgetgalaxy.com",
+      "amount": 299,
+      "active": true,
+      "decision": "Escalate",
+      "items": [
+        {
+          "name": "Smartphone Case",
+          "id": "G002",
+          "price": 299,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD133",
+      "reason": "Defective Item",
+      "store_name": "Kitchen King",
+      "store_logo": "/logos/kitchen.png",
+      "store_url": "https://kitchenking.com",
+      "amount": 149,
+      "active": false,
+      "decision": "Refunded",
+      "items": [
+        {
+          "name": "Non-Stick Pan",
+          "id": "K001",
+          "price": 149,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD134",
+      "reason": "Wrong Item Received",
+      "store_name": "Pet Paradise",
+      "store_logo": "/logos/pet.png",
+      "store_url": "https://petparadise.com",
+      "amount": 45,
+      "active": true,
+      "decision": "Escalate",
+      "items": [
+        {
+          "name": "Dog Bed",
+          "id": "P001",
+          "price": 45,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD135",
+      "reason": "Item Not Received",
+      "store_name": "Outdoor Gear",
+      "store_logo": "/logos/outdoor.png",
+      "store_url": "https://outdoorgear.com",
+      "amount": 199,
+      "active": false,
+      "decision": "Refunded",
+      "items": [
+        {
+          "name": "Camping Tent",
+          "id": "O001",
+          "price": 199,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD136",
+      "reason": "Defective Item",
+      "store_name": "Beauty Bliss",
+      "store_logo": "/logos/beauty.png",
+      "store_url": "https://beautybliss.com",
+      "amount": 69,
+      "active": false,
+      "decision": "Pending",
+      "items": [
+        {
+          "name": "Moisturizer Cream",
+          "id": "B002",
+          "price": 69,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD137",
+      "reason": "Wrong Size",
+      "store_name": "Sporty Styles",
+      "store_logo": "/logos/sporty.png",
+      "store_url": "https://sportystyles.com",
+      "amount": 89,
+      "active": false,
+      "decision": "Refunded",
+      "items": [
+        {
+          "name": "Running Shoes",
+          "id": "S001",
+          "price": 89,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD138",
+      "reason": "Item Not as Described",
+      "store_name": "Tech World",
+      "store_logo": "/logos/techworld.png",
+      "store_url": "https://techworld.com",
+      "amount": 499,
+      "active": true,
+      "decision": "Escalate",
+      "items": [
+        {
+          "name": "Wireless Keyboard",
+          "id": "T002",
+          "price": 499,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD139",
+      "reason": "Defective Item",
+      "store_name": "Home Decor",
+      "store_logo": "/logos/decor.png",
+      "store_url": "https://homedecor.com",
+      "amount": 129,
+      "active": false,
+      "decision": "Refunded",
+      "items": [
+        {
+          "name": "Wall Clock",
+          "id": "D001",
+          "price": 129,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD140",
+      "reason": "Wrong Item Received",
+      "store_name": "Toy Town",
+      "store_logo": "/logos/toy.png",
+      "store_url": "https://toytown.com",
+      "amount": 39,
+      "active": false,
+      "decision": "Pending",
+      "items": [
+        {
+          "name": "Remote Control Car",
+          "id": "Y001",
+          "price": 39,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD141",
+      "reason": "Item Not Received",
+      "store_name": "Healthy Bites",
+      "store_logo": "/logos/healthy.png",
+      "store_url": "https://healthybites.com",
+      "amount": 29,
+      "active": true,
+      "decision": "Accept",
+      "items": [
+        {
+          "name": "Protein Bars",
+          "id": "F002",
+          "price": 29,
+          "quantity": 10
+        }
+      ]
+    },
+    {
+      "id": "ORD142",
+      "reason": "Defective Item",
+      "store_name": "Gaming Gear",
+      "store_logo": "/logos/gaming.png",
+      "store_url": "https://gaminggear.com",
+      "amount": 599,
+      "active": false,
+      "decision": "Pending",
+      "items": [
+        {
+          "name": "Gaming Mouse",
+          "id": "G003",
+          "price": 599,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD143",
+      "reason": "Wrong Color",
+      "store_name": "Chic Styles",
+      "store_logo": "/logos/chic.png",
+      "store_url": "https://chicstyles.com",
+      "amount": 99,
+      "active": false,
+      "decision": "Refunded",
+      "items": [
+        {
+          "name": "Leather Handbag",
+          "id": "C003",
+          "price": 99,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "ORD144",
+      "reason": "Item Not as Described",
+      "store_name": "Electro World",
+      "store_logo": "/logos/electro.png",
+      "store_url": "https://electroworld.com",
+      "amount": 899,
+      "active": true,
+      "decision": "Escalate",
+      "items": [
+        {
+          "name": "Bluetooth Speaker",
+          "id": "E001",
+          "price": 899,
+          "quantity": 1
+        }
+      ]
     }
   ]
 }

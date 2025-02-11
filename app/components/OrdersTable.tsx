@@ -23,11 +23,11 @@ export default function OrdersTable({ orders }: OrdersTableProps) {
             </Table>
 
             {/* Pagination Controls */}
-            <div className="flex justify-between items-center mt-4">
+            <div className="flex justify-between text-white items-center mt-4">
                 <button
                     onClick={() => setPage((p) => Math.max(1, p - 1))}
                     disabled={page === 1}
-                    className="px-4 py-2 bg-button text-white rounded-md disabled:opacity-50"
+                    className="px-4 py-2 bg-button rounded-md disabled:opacity-50"
                 >
                     Previous
                 </button>
@@ -39,7 +39,7 @@ export default function OrdersTable({ orders }: OrdersTableProps) {
                 <button
                     onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
                     disabled={page === totalPages}
-                    className="px-4 py-2 bg-button text-white rounded-md disabled:opacity-50"
+                    className="px-4 py-2 bg-button rounded-md disabled:opacity-50"
                 >
                     Next
                 </button>
