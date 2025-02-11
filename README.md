@@ -4,10 +4,10 @@ Task for a Next.js dashboard for managing refund orders for Yamm.sa. It features
 
 ## 📸 Screenshots
 
-![Dashboard Overview](\public\dashboard.png)
+![Dashboard Overview](/public/dashboard.png)
 *Main dashboard view showing refund orders table*
 
-![Order Info](\public\order.png)
+![Order Info](/public/order.png)
 *Order details page*
 
 ## 🚀 Features
