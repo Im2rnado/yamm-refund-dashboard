@@ -15,7 +15,7 @@ export default function RefundOrdersPage() {
     if (error) return <p>Something went wrong!</p>;
 
     return (
-        <div>
+        <div className="p-6">
             <h1 className="text-2xl font-semibold mb-4">Refund Orders</h1>
             <Table headers={["ID", "Reason", "Store", "Amount", "Status", "Items", "Decision", "Actions"]}>
                 {orders.map((order: Order) => (

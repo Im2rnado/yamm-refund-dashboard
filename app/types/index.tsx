@@ -6,7 +6,7 @@ export interface Order {
     store_url: string;
     amount: number;
     active: boolean;
-    items: unknown[];
+    items: OrderItem[];
     decision: string;
 }
 
@@ -20,4 +20,11 @@ export interface OrderRowProps {
     active: boolean;
     itemsCount: number;
     decision: string | null;
+}
+
+export interface OrderItem {
+    id: string;
+    name: string;
+    quantity: number;
+    price: number;
 }
