@@ -1,40 +1,40 @@
 {
-    "refunds": [
+  "refunds": [
+    {
+      "id": "ORD123",
+      "reason": "Defective Item",
+      "store_name": "Luxury Watches",
+      "store_logo": "/logos/luxury.png",
+      "store_url": "https://luxurywatches.com",
+      "amount": 3499,
+      "active": true,
+      "decision": null,
+      "items": [
         {
-            "id": "ORD123",
-            "reason": "Defective Item",
-            "store_name": "Luxury Watches",
-            "store_logo": "/logos/luxury.png",
-            "store_url": "https://luxurywatches.com",
-            "amount": 3499,
-            "active": true,
-            "decision": null,
-            "items": [
-                {
-                    "name": "First Night Age",
-                    "id": "W001",
-                    "price": 3499,
-                    "quantity": 1
-                }
-            ]
-        },
-        {
-            "id": "ORD124",
-            "reason": "Wrong Item Received",
-            "store_name": "Elite Timepieces",
-            "store_logo": "/logos/elite.png",
-            "store_url": "https://elitetimepieces.com",
-            "amount": 5299,
-            "active": false,
-            "decision": null,
-            "items": [
-                {
-                    "name": "Eternal Elegance",
-                    "id": "W002",
-                    "price": 5299,
-                    "quantity": 1
-                }
-            ]
+          "name": "First Night Age",
+          "id": "W001",
+          "price": 3499,
+          "quantity": 1
         }
-    ]
+      ]
+    },
+    {
+      "id": "ORD124",
+      "reason": "Wrong Item Received",
+      "store_name": "Elite Timepieces",
+      "store_logo": "/logos/elite.png",
+      "store_url": "https://elitetimepieces.com",
+      "amount": 5299,
+      "active": false,
+      "decision": null,
+      "items": [
+        {
+          "name": "Eternal Elegance",
+          "id": "W002",
+          "price": 5299,
+          "quantity": 1
+        }
+      ]
+    }
+  ]
 }

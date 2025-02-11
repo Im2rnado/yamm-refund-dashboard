@@ -1,5 +1,6 @@
 import Sidebar from "./components/Sidebar";
-import Providers from './providers'
+import Providers from "./providers";
+import { Toaster } from "react-hot-toast";
 import "../styles/globals.css";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -9,6 +10,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Providers>
           <Sidebar />
           <main className="ml-64 w-full p-6">{children}</main>
+          <Toaster position="top-right" />
         </Providers>
       </body>
     </html>
