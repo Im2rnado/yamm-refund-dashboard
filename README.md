@@ -2,6 +2,14 @@
 
 Task for a Next.js dashboard for managing refund orders for Yamm.sa. It features a navigation sidebar, a paginated table, and actions for each order, such as status toggling and decision updates.
 
+## 📸 Screenshots
+
+![Dashboard Overview](\public\dashboard.png)
+*Main dashboard view showing refund orders table*
+
+![Order Info](\public\order.png)
+*Order details page*
+
 ## 🚀 Features
 - **Paginated Table**: Displays refund orders with up to 15 orders per page.
 - **Actions**: Change decision status, toggle active/inactive state, and view order details.
