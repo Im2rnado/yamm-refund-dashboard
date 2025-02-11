@@ -1,30 +1,24 @@
 "use client";
-import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import Table from "../components/Table";
 import OrderRow from "../components/OrderRow";
-
-const mockData = [
-    {
-        id: "ORD123",
-        reason: "Defective Item",
-        store_name: "Luxury Watches",
-        store_logo: "/logos/luxury.png",
-        store_url: "https://luxurywatches.com",
-        amount: 3499,
-        active: true,
-        decision: null,
-        items: [{ name: "First Night Age", id: "W001", price: 3499, quantity: 1 }],
-    },
-];
+import { fetchRefunds } from "../lib/api";
+import { Order } from "../types";
 
 export default function RefundOrdersPage() {
-    const [orders] = useState(mockData);
+    const { data: orders, isLoading, error } = useQuery({
+        queryKey: ["refunds"],
+        queryFn: fetchRefunds,
+    });
+
+    if (isLoading) return <p>Loading...</p>;
+    if (error) return <p>Something went wrong!</p>;
 
     return (
         <div>
             <h1 className="text-2xl font-semibold mb-4">Refund Orders</h1>
             <Table headers={["ID", "Reason", "Store", "Amount", "Status", "Items", "Decision", "Actions"]}>
-                {orders.map((order) => (
+                {orders.map((order: Order) => (
                     <OrderRow
                         key={order.id}
                         id={order.id}
